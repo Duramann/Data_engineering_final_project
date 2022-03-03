@@ -28,6 +28,10 @@ def predict():
         result = model.predict(to_process)
         
         printtexte = " ".join([w for w in texte])
-        
 
-        return render_template('index.html', result=result, topredict='The sentence to analyse was : "' + printtexte + '"')
+        printresult = ''
+
+        for key in result:
+            printresult += " - " + " ".join([w for w in key.capitalize().split('_')]) + ": " + str((result[key]*100).round(2)) + ' - '
+
+        return render_template('index.html', result=printresult, topredict='The sentence to analyse was : "' + printtexte + '"')
