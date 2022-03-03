@@ -1,11 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from detoxify import Detoxify
-import nltk
-from nltk.corpus import stopwords
 from string import punctuation
-
-nltk.download('stopwords')
-stop_words = stopwords.words('english')
 
 app = Flask(__name__)
 
