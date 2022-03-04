@@ -34,12 +34,12 @@
             
             <h3 style="color: #FAFAD2;" class="predictext"> {{topredict}} </h2>
             <div class="result-body">
-            <table>
+            <table style="background:#EEBF6F">
                 <tbody>
                 {% for key, value in result.items() %}
                  <tr>
-                     <td> {{ key }} </td>
-                     <td> {{ value }} </td>
+                     <td style="border: 5px solid #292626;"> {{ key }} </td>
+                     <td style="border: 5px solid #292626;"> {{ value }} </td>
                  </tr>
                 {% endfor %}
                 </tbody>

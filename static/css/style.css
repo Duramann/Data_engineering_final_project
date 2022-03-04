@@ -56,10 +56,10 @@ body {
 }
 
 .result-body {
-  color: #EEBF6F;
+  color:#292626;
   font-family: "cresta";
   text-align: center;
-  font-size:40px;
+  font-size:20px;
   margin-bottom: 10px;
 }
 
@@ -140,6 +140,12 @@ body {
     font-weight: 10px;
     font-size: 15px;
     
+  }
+
+  .load {
+    text-align: center;
+    width: 2px;
+    height: 2px;
   }
 
   
