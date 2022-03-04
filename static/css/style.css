@@ -55,6 +55,14 @@ body {
   text-align: center;
 }
 
+.result-body {
+  color: #EEBF6F;
+  font-family: "cresta";
+  text-align: center;
+  font-size:40px;
+  margin-bottom: 10px;
+}
+
 .bn30 {
     display: center;
     font-family: "landre";

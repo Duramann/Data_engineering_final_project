@@ -10,8 +10,6 @@
         initial-scale=1.0" />
         <title>Toxicity Analysis</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-
 
     </head>
     <body>
@@ -28,13 +26,25 @@
                 </div>
                 <br>
                 <div class="form-group">
-                    <button type="submit" class="bn30" onclick="$('#loading').show();"
-                    > Predict </button>
+                    <button type="submit" class="bn30"> Predict </button>
                 </div>
                 
-            </form>  
-            <div id="loading" style="display:none;text-align: center;width: 150px;height: 150px;"><img src="{{ url_for('static', filename='loading.gif') }}" alt="" />Loading!</div>
-         
+            </form>
+
+            
+            <h3 style="color: #FAFAD2;" class="predictext"> {{topredict}} </h2>
+            <div class="result-body">
+            <table>
+                <tbody>
+                {% for key, value in result.items() %}
+                 <tr>
+                     <td> {{ key }} </td>
+                     <td> {{ value }} </td>
+                 </tr>
+                {% endfor %}
+                </tbody>
+              </table>  
+            </div>          
             
             
         </div>
