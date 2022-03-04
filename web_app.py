@@ -27,6 +27,6 @@ def predict():
         printresult = ''
 
         for key in result:
-            printresult += " - " + " ".join([w for w in key.capitalize().split('_')]) + ": " + str((result[key]*100).round(2)) + ' - '
+            printresult += " ".join([w for w in key.capitalize().split('_')]) + ": " + str((result[key]*100).round(2)) + '% <br> '
 
         return render_template('index.html', result=printresult, topredict='The sentence to analyse was : "' + printtexte + '"')
