@@ -3,3 +3,4 @@ requests
 detoxify
 selenium
 webdriver-manager
+pytest
