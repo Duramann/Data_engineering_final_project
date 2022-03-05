@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages{
-        stage('Switching to release branch'){
-            steps{
-                bat 'git checkout release'
-            }
-        }
         stage('Build Docker Image'){
             steps{
                 bat 'docker-compose up --build -d'
@@ -14,6 +9,11 @@ pipeline {
         stage('Execute Tests'){
             steps{
                 bat 'pytest'
+            }
+        }
+        stage('Switching to release branch'){
+            steps{
+                bat 'git checkout release'
             }
         }
         stage('Deliver'){
