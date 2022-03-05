@@ -6,6 +6,12 @@ pipeline {
                 bat 'docker-compose up --build -d'
             }
         }
+        stage('Installing click'){
+            steps{
+                bat 'pip install click'
+                bat 'pip install Click'
+            }
+        }
         stage('Execute Tests'){
             steps{
                 bat 'python -m pytest test_web_app.py'
