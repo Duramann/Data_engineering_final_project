@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Execute Tests'){
             steps{
-                bat 'pytest'
+                bat 'python -m pytest test_web_app.py'
             }
         }
         stage('Switching to release branch'){
