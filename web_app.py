@@ -4,6 +4,8 @@ from string import punctuation
 
 app = Flask(__name__)
 
+model = Detoxify('original')
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -19,7 +21,6 @@ def predict():
         texte = [str(x) for x in rawtext]
         to_process = " ".join([w for w in texte])
             
-        model = Detoxify('original')
         result = model.predict(to_process)
         
         printtexte = " ".join([w for w in texte])

@@ -26,7 +26,7 @@
                 </div>
                 <br>
                 <div class="form-group">
-                    <button type="submit" class="bn30"> Predict </button>
+                    <button id="button" type="submit" class="bn30"> Predict </button>
                 </div>
                 
             </form>
@@ -38,7 +38,7 @@
                 <tbody>
                 {% for key, value in result.items() %}
                  <tr>
-                     <td style="border: 5px solid #292626;"> {{ key }} </td>
+                     <td style="border: 5px solid #292626;" id = "result"> {{ key }} </td>
                      <td style="border: 5px solid #292626;"> {{ value }} </td>
                  </tr>
                 {% endfor %}
