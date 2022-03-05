@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('Upgrade pip'){
             steps{
-                bat 'pip install --upgrade pip'
+                bat 'pip install --upgrade pip --user'
             }
         }
         stage('Build Docker Image'){
