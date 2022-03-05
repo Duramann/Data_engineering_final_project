@@ -1,7 +1,42 @@
 version: "3"
+
+networks:
+  monitor-net:
+    driver: bridge
+
 services:
   web-app:
     container_name: flask-app-project
-    build: .
+    build: ./flask_app/.
     ports:
       - "5000:5000"
+    volumes:
+      - "./flask_app/web_app.py:/web_app.py"
+    networks:
+            - monitor-net
+  
+  prometheus:
+        image: prom/prometheus
+        container_name: prometheus
+        ports:
+                - 9090:9090
+        volumes:
+                - "./prometheus.yml:/etc/prometheus/prometheus.yml"
+                - "./rules.yml:/etc/prometheus/rules.yml"
+        restart: always
+        networks:
+            - monitor-net
+
+  node_exporter:
+        image: prom/node-exporter
+        container_name: node-exporter
+        ports:
+            - 9100:9100
+        pid: host
+        restart: always
+        networks:
+            - monitor-net
+  
+  grafana:
+        image: grafana/grafana
+        container_name: grafana
