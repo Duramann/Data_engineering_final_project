@@ -1,15 +1,14 @@
 pipeline {
     agent any
     stages{
+        stage('Upgrade pip'){
+            steps{
+                bat 'pip install --upgrade pip'
+            }
+        }
         stage('Build Docker Image'){
             steps{
                 bat 'docker-compose up --build -d'
-            }
-        }
-        stage('Installing click'){
-            steps{
-                bat 'pip install click'
-                bat 'pip install Click'
             }
         }
         stage('Execute Tests'){
