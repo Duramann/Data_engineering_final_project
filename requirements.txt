@@ -4,3 +4,4 @@ detoxify
 selenium
 webdriver-manager
 pytest
+click
