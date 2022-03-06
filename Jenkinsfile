@@ -16,7 +16,7 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'GitHub', usernameVariable: 'user', passwordVariable: 'password')]) {
                     bat 'git add .'
                     bat 'git diff --quiet && git diff --staged --quiet || git commit -am "Change for release"'
-                    bat 'git push https://${user}:${password}@github.com/Duramann/Data_engineering_final_project.git'
+                    bat 'git push https://${password}@github.com/Duramann/Data_engineering_final_project.git'
             }
         }
     }
