@@ -10,6 +10,7 @@
         initial-scale=1.0" />
         <title>Toxicity Analysis</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
     </head>
     <body>
@@ -31,6 +32,9 @@
                 
             </form>
 
+            <div class="load">
+                <div id="loading" style="display:none;"><img src="{{ url_for('static', filename='load.gif') }}" alt="" /></div>
+            </div>
             
             <h3 style="color: #FAFAD2;" class="predictext"> {{topredict}} </h2>
             <div class="result-body">

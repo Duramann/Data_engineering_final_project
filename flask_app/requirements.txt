@@ -3,4 +3,4 @@ requests
 detoxify
 selenium
 webdriver-manager
-pytest
+prometheus-client
