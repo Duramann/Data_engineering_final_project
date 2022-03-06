@@ -13,7 +13,6 @@ pipeline {
                 }
             }
             steps {
-                withEnv(["HOME=${env.WORKSPACE}"]) {
                     bat 'pip install --user -r requirements.txt'
                     bat 'python -m pytest test_web_app.py'
                 }
