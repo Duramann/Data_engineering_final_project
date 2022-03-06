@@ -80,6 +80,19 @@ Here are the test that we performed in test_web_app.py :
 * Stress testing of the home page and the prediction page to see if they can handle 100 request a second.
 * end-to-end testing to see if we can submit a prediction and hit predict.
 
+### Monitoring :
+
+Prometheus and Grafana were used to monitor our application.
+
+We created a dashboard on Grafana (localhost:3000) with those insights:
+
+* Disk Usage.
+* Memory Usage.
+* CPU Usage.
+* Number of visit of the home page.
+* Number of prediction made.
+* Average prediction time.
+
 ### Project Management : <br />
 
 A Trello was created to coordinate the tasks between the team members.

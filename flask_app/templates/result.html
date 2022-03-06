@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+        <meta charset="UTF-8"/>
+        <meta name="viewport"
+        content="width=device-width,
+        initial-scale=1.0" />
+        <title>Toxicity Analysis</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <div class="box">
+            
+            <div class="instructions">
+                <h1 class="main-title"> Toxicity Monitor.</h1>
+                <h2 class="informations"> Is your english sentence toxic?</h2>
+            </div>
+
+            <form action="{{ url_for('predict') }}"method="post", id="msform">
+                <div class="form-group">
+                    <textarea rows="3" cols="200" name="sentence" placeholder="Enter sentence here" required="required"></textarea>
+                </div>
+                <br>
+                <div class="form-group">
+                    <button id="button" type="submit" class="bn30"> Predict </button>
+                </div>
+                
+            </form>
+
+            <div class="load">
+                <div id="loading" style="display:none;"><img src="{{ url_for('static', filename='load.gif') }}" alt="" /></div>
+            </div>
+            
+            <h3 style="color: #FAFAD2;" class="predictext"> {{topredict}} </h2>
+            <div class="result-body">
+            <table style="background:#EEBF6F; color:#292626">
+                <tbody>
+                {% for key, value in result.items() %}
+                 <tr>
+                     <td style="border: 5px solid #292626;" id = "result"> {{ key }} </td>
+                     <td style="border: 5px solid #292626;"> {{ value }} </td>
+                 </tr>
+                {% endfor %}
+                </tbody>
+              </table>  
+            </div>          
+            
+            
+        </div>
+    </body>
+</html>
