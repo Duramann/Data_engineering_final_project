@@ -14,7 +14,7 @@
     <img src="https://img.shields.io/maintenance/yes/2021?style=for-the-badge"
       alt="Maintenance" />
   <!-- Last Commit -->
-  <a href="https://github.com/Duramann/Data_engineering_final_project/commit/main">
+  <a href="https://github.com/Duramann/Data_engineering_final_project/commit/release">
     <img src="https://img.shields.io/github/last-commit/Duramann/Data_engineering_final_project?style=for-the-badge"
       alt="Last Commit" />
   </a>
