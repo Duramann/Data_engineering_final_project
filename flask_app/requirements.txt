@@ -4,4 +4,3 @@ detoxify
 selenium
 webdriver-manager
 prometheus-client
-click
