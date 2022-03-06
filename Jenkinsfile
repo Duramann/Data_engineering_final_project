@@ -7,13 +7,7 @@ pipeline {
             }
         }
         stage('Execute Test') {
-            agent {
-                docker { image 'python:3.8-buster' }
-            }
             steps {
-                bat 'python -m venv .venv'
-                bat '. .venv/bin/activate'
-                bat 'pip install --user -r requirements.txt'
                 bat 'python -m pytest test_web_app.py'
                 }
             }
