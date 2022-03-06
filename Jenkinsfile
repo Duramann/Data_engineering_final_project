@@ -7,8 +7,16 @@ pipeline {
             }
         }
         stage('Execute Tests'){
+            agent {
+                docker {
+                    image 'python:3-alpine'
+                }
+            }
             steps{
-                bat 'python -m pytest test_web_app.py'
+                withEnv(["HOME=${env.WORKSPACE}"]) {
+                    bat 'pip install --user -r requirements.txt'
+                    bat 'python -m pytest test_web_app.py'
+            }
             }
         }
         stage('Switching to release branch'){
