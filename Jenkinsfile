@@ -6,11 +6,6 @@ pipeline {
                 bat 'docker-compose up --build -d'
             }
         }
-        stage('Execute Test') {
-            steps {
-                bat 'python -m pytest test_web_app.py'
-                }
-            }
         stage('Switching to release branch'){
             steps{
                 bat 'git checkout release'
