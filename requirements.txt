@@ -1,0 +1,6 @@
+flask==1.1.2
+requests
+detoxify
+selenium
+webdriver-manager
+pytest
