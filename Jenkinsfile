@@ -6,11 +6,6 @@ pipeline {
                 bat 'docker-compose up --build -d'
             }
         }
-        stage('Install Pytest'){
-            steps{
-                bat 'pip install pytest --user'
-            }
-        }
         stage('Execute Tests'){
             steps{
                 bat 'python -m pytest test_web_app.py'
