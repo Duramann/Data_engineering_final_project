@@ -5,13 +5,13 @@ pipeline {
             steps{
                 bat 'docker-compose up --build -d'
             }
+        }
         stage('Testing'){
 		    steps{
                 bat 'docker exec flask-app python app_test.py --verbose'
             } 
 	}
-    }
-    
+
 }
 }
 
