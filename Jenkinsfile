@@ -13,11 +13,10 @@ pipeline {
                 }
             }
             steps {
-                    bat 'pip install --user -r requirements.txt'
-                    bat 'python -m pytest test_web_app.py'
+                bat 'pip install --user -r requirements.txt'
+                bat 'python -m pytest test_web_app.py'
                 }
             }
-        }
         stage('Switching to release branch'){
             steps{
                 bat 'git checkout release'
