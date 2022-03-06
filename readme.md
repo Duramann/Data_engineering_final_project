@@ -14,20 +14,20 @@
     <img src="https://img.shields.io/maintenance/yes/2021?style=for-the-badge"
       alt="Maintenance" />
   <!-- Last Commit -->
-  <a href="https://github.com/EFR-AI/AIBSIF/commit/main">
-    <img src="https://img.shields.io/github/last-commit/Duramann/Data_engineering_project?style=for-the-badge"
+  <a href="https://github.com/Duramann/Data_engineering_final_project/commit/main">
+    <img src="https://img.shields.io/github/last-commit/Duramann/Data_engineering_final_project?style=for-the-badge"
       alt="Last Commit" />
   </a>
   <!-- Activity -->
-  <a href="https://github.com/EFR-AI/AIBSIF/graphs/commit-activity">
-    <img src="https://img.shields.io/github/commit-activity/w/Duramann/Data_engineering_project?style=for-the-badge"
+  <a href="https://github.com/Duramann/Data_engineering_final_project/graphs/commit-activity">
+    <img src="https://img.shields.io/github/commit-activity/w/Duramann/Data_engineering_final_project?style=for-the-badge"
       alt="Activity" />
   </a>
   <!-- PR -->
   <!--  <img src="https://img.shields.io/github/status/contexts/pulls/Duramann/Data_engineering_project/0?style=for-the-badge"-->
   <!--    alt="pulls" />-->
   <!-- Size -->
-    <img src="https://img.shields.io/github/repo-size/Duramann/Data_engineering_project?style=for-the-badge"
+    <img src="https://img.shields.io/github/repo-size/Duramann/Data_engineering_final_project?style=for-the-badge"
       alt="size" />
 </div>
 
