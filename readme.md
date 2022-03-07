@@ -49,10 +49,11 @@
 │
 ├── requirements.txt        &lt;- The requirements for the Docker image 
 │
-├── web_app.py              &lt;- The python script to define the web application and link it to the model.
+├── flask_app              &lt;- The folder with the app, its requirement, Dockerfile and the script for testing
 │
-└── test_web_app.py         &lt;- The python script for unit and integration testing.
-
+├── JenkinsFile         &lt;- The file to configure the steps for our jenkins pipeline
+│
+└── Prometheus.yml & Rules.yml         &lt;- The two configuration file for monitoring.
 </code></pre><br />
 
 On Github, several branches were created during the project and were deleted when merged.
