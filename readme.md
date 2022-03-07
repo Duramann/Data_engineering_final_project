@@ -49,7 +49,9 @@
 │
 ├── JenkinsFile         &lt;- The file to configure the steps for our jenkins pipeline
 │
-└── Prometheus.yml & Rules.yml         &lt;- The two configuration file for monitoring.
+├── Data engineering ...json         &lt;- The json containing information about our Grafana Dashboard
+│
+└── Prometheus.yml & Rules.yml         &lt;- The two configuration file for monitoring
 </code></pre><br />
 
 On Github, several branches were created during the project and were deleted when merged.
