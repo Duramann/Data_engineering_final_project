@@ -38,10 +38,7 @@
 <pre><code class="language-nohighlight">
 ├── README.md               &lt;- The top-level README for developers using this project. 
 │
-├── static                  &lt;- The folder containing the css files.
-│      └── css       
-│ 
-├── templates               &lt;- The folder containing the html files.
+├── flask_app              &lt;- The folder with the app, its requirement, Dockerfile and the script for testing
 │
 ├── docker-compose.yaml     &lt;- The docker compose properties to define the multi-container docker application. <strong> The port used is "5000" </strong>
 │
@@ -49,7 +46,6 @@
 │
 ├── requirements.txt        &lt;- The requirements for the Docker image 
 │
-├── flask_app              &lt;- The folder with the app, its requirement, Dockerfile and the script for testing
 │
 ├── JenkinsFile         &lt;- The file to configure the steps for our jenkins pipeline
 │
